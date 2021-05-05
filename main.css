@@ -1,0 +1,131 @@
+.art-container {
+    position: relative;
+}
+
+.dark, .light {
+    position: absolute;
+}
+
+.dark {
+    opacity: 0;
+}
+
+#bg {
+    opacity: 0;
+}
+
+body {
+    background-color: #C0CFDC;
+    animation-name: change-bg;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#light-hair-top, #light-hair-bottom, #mouth {
+    animation-name: change-hair-light;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#light-head {
+    animation-name: change-head-light;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#glass-left, #glass-right {
+    animation-name: change-glasses;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#dark-highlights > path {
+    animation-name: fade-highlights-dark;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#light-highlights > path {
+    opacity: 100;
+    animation-name: fade-highlights-light;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#dark-shadows {
+    opacity: 0%;
+    animation-name: fade-shadows-dark;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#pupil-left, #pupil-right {
+    transform: translateX(-3px);
+    animation-name: move-eyes;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 1s;
+}
+
+@keyframes move-eyes {
+    from {transform: translateX(-3px);}
+    to {transform: translateX(+3px);}
+}
+
+@keyframes fade-highlights-light {
+    from {opacity: 100;}
+    to {opacity: 0;}
+}
+
+@keyframes fade-highlights-dark {
+    from {fill: #A16CB4; fill-opacity: 0;}
+    to {fill: #0675F5; fill-opacity: 1;}
+}
+
+@keyframes change-glasses {
+    from {fill: #E7B63B; fill-opacity: .3;}
+    to {fill: #3BE7DD; fill-opacity: .8;}
+}
+
+@keyframes change-head-light {
+    from {fill: #A16CB4;}
+    to {fill: #244CD3;}
+}
+
+@keyframes fade-light {
+    from {fill: #A16CB4; fill-opacity: 0;}
+    to {fill: #244CD3; fill-opacity: 1;}
+}
+
+@keyframes fade-dark {
+    from {opacity: 100%;}
+    to {opacity: 0%;}
+}
+
+@keyframes change-hair-light {
+    from {fill: #244CD3;}
+    to {fill: #000000;}
+}
+
+@keyframes change-shadows-light {
+    from {fill: #244CD3;}
+    to {fill: #000000;}
+}
+
+@keyframes fade-shadows-dark {
+    from {opacity: 0;}
+    to {opacity: 100;}
+}
+
+@keyframes change-bg {
+    from {background-color: #C0CFDC;}
+    to {background-color: #00162A;}
+}
